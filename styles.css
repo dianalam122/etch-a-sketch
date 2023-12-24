@@ -37,3 +37,7 @@ h6{
     display: grid;
     border: 1px solid black;
 }
+
+#message{
+    text-align: center;
+}
