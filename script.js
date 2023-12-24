@@ -51,9 +51,9 @@ function colorDiv(e) {
     
     if (color === 'random') {
         e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
-        e.target.style.backgroundColor = color;
-    }
+    } else if (color === 'white') {
+        e.target.style.backgroundColor = 'white';
+    } else e.target.style.backgroundColor = 'black';
     
 }
 
@@ -63,11 +63,26 @@ function setColor(colorChoice){
 }
 
 
+// Buttons 
 const blackBtn = document.querySelector(".blackBtn");
 blackBtn.addEventListener('click', function() {
     setColor('black');
 });
+
 const rainbowBtn = document.querySelector(".rainbowBtn");
 rainbowBtn.addEventListener('click', function() {
     setColor('random');
 });
+
+const eraserBtn = document.querySelector('.eraserBtn');
+eraserBtn.addEventListener('click', function(){
+    setColor('white');
+});
+
+const clearBtn = document.querySelector('.clearBtn')
+clearBtn.addEventListener('click', function(){
+    location.reload();
+})
+
+
+
